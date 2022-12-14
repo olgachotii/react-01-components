@@ -259,4 +259,44 @@ ptb→	PropTypes.bool
 
 [документація](https://github.com/ults-io/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md)
 
-## 2.
+## 2. React Icons
+
+- [react-icons](https://react-icons.github.io/react-icons/)
+
+```powershell
+npm install react-icons --save
+```
+
+```js
+import { FaBeer } from "react-icons/fa";
+
+class Question extends React.Component {
+  render() {
+    return (
+      <h3>
+        Lets go for a <FaBeer />?
+      </h3>
+    );
+  }
+}
+```
+
+## 3. Date-fns - бібліотека нормолизаціі часу
+
+- [date-fns](https://date-fns.org/)
+
+```powershell
+npm install date-fns --save
+```
+
+```js
+import { format } from "date-fns";
+import { uk } from "date-fns/locale"; //якщо треба локилізувати
+
+export const formatEventStart = (start) => {
+  return format(Date.parse(start), "dd MMMM yyyy, HH:mm", {
+    //якщо треба локилізувати
+    locale: ua,
+  });
+};
+```
